@@ -30,6 +30,11 @@
 npm install  # Install dependencies (if not already installed)
 ```
 
+### Create .env file
+```dosini
+token=DISCORD_USER_TOKEN_HERE
+```
+
 ### Configure bot-config.json
 
 - Set "loggingChannel" to the channel ID where scam detection logs should be sent. This ID should be for a DM (Direct Message) channel, but the code can be modified to support a TextChannel from a guild instead.
