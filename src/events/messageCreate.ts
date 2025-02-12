@@ -30,7 +30,6 @@ async function scamDetectorInGuilds(message: Message) {
         .filter((guild: Guild): guild is Guild => guild !== undefined && config.scamGuildsIds.includes(guild.id));
 
     if (mutualScamGuilds.length > 0) {
-        console.log(`${message.author.username} en ${message.guild.name}`);
         console.log([
             `${colors.red(`${message.author.username} (${message.author.id}) has been detected as a potential scammer.`)}`,
             `${colors.red(`- Mutual Guilds:`)}`,
