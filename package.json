@@ -1,0 +1,17 @@
+{
+  "name": "mcscamdetector",
+  "version": "1.0.0",
+  "main": "start.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "drexiing",
+  "license": "MIT",
+  "description": "A selfbot built with the discord.js-selfbot library, designed to identify and warn about users potentially attempting to scam Minecraft accounts from your server or guild members.",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js-selfbot-v13": "^3.5.1",
+    "dotenv": "^16.4.7"
+  }
+}

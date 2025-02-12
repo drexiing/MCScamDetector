@@ -1,0 +1,10 @@
+{   
+    "loggingChannel": "",
+    "guilds": [
+        {
+            "id": "",
+            "channelsIds": [""]
+        }
+    ],
+    "scamGuildsIds": [""]
+}
