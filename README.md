@@ -32,7 +32,7 @@ npm install  # Install dependencies (if not already installed)
 
 ### Configure bot-config.json
 
-- Set "loggingChannel" to the channel ID where scam detection logs should be sent.
+- Set "loggingChannel" to the channel ID where scam detection logs should be sent. This ID should be for a DM (Direct Message) channel, but the code can be modified to support a TextChannel from a guild instead.
 - Define "guilds" with the server and channel IDs to monitor.
 - List scam-related server IDs under "scamGuildsIds" to identify potential scammers.
 
