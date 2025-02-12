@@ -31,8 +31,9 @@ npm install  # Install dependencies (if not already installed)
 ```
 
 ### Create .env file
+
 ```dosini
-token=DISCORD_USER_TOKEN_HERE
+token="DISCORD_USER_TOKEN_HERE"
 ```
 
 ### Configure bot-config.json
