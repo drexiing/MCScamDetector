@@ -6,6 +6,8 @@ import {
 import colors from "colors/safe.js";
 import config from "../config/bot-config.json" assert { type: "json" };
 
+const detectedUsers = new Set<string>();
+
 export const messageCreate = async(message: Message) => {
     await scamDetectorInGuilds(message);
 }
@@ -30,6 +32,9 @@ async function scamDetectorInGuilds(message: Message) {
         .filter((guild: Guild): guild is Guild => guild !== undefined && config.scamGuildsIds.includes(guild.id));
 
     if (mutualScamGuilds.length > 0) {
+        if (detectedUsers.has(message.author.id)) return;
+        detectedUsers.add(message.author.id);
+
         console.log([
             `${colors.red(`${message.author.username} (${message.author.id}) has been detected as a potential scammer.`)}`,
             `${colors.red(`- Mutual Guilds:`)}`,
