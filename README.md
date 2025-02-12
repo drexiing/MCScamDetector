@@ -19,8 +19,41 @@
 
 ## Usage
 
-- Para usar este bot, es importante que instales las dependencias necesarias antes de iniciarlo.
-- 
+> [!IMPORTANT]
+> **The bot must also be a member of the servers you want to monitor.**
+
+## Setup
+
+### Install Dependencies
+
+```sh-session
+npm install  # Install dependencies (if not already installed)
+```
+
+### Configure bot-config.json
+
+- Set "loggingChannel" to the channel ID where scam detection logs should be sent.
+- Define "guilds" with the server and channel IDs to monitor.
+- List scam-related server IDs under "scamGuildsIds" to identify potential scammers.
+
+```json
+{   
+    "loggingChannel": "1234567891011",
+    "guilds": [
+        {
+            "id": "1234567891011",
+            "channelsIds": ["1234567891011"]
+        }
+    ],
+    "scamGuildsIds": ["1234567891011", "1234567891011"]
+}
+```
+
+### Running the Bot
+
+```sh-session
+node .
+```
 
 ## Credits
 
